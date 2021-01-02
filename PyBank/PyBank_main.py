@@ -3,10 +3,10 @@ import os
 import csv
 
 # path to CSV file
-#budget_path = os.path.join('.', 'PyBank', 'Resources', 'budget_data.csv')
-budget_path = os.path.join('..', 'Python_Homework2_Py-Me-Up-Charlie', 'budget_data.csv')
+csvpath = os.path.join('C:/Users/jariwalaj2/OneDrive/Python_Homework2_Py-Me-Up-Charlie/budget_data.csv')
+
 # open and read the CSV file
-with open(budget_path) as csvfile:
+with open(csvpath) as csvfile:
 
     # specify delimiter and variable that holds the content from the CSV file
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -66,11 +66,11 @@ with open(budget_path) as csvfile:
                 greatest_monthly_decrease = row[0]
 
     # Calculate the average and the date
-    average = sum(profit_changes)/len(profit_changes)
+    average = sum(monthly_changes)/len(monthly_changes)
 
     # Calculate the max and min from the csv file
-    increase = max(profit_changes)
-    decrease = min(profit_changes)
+    increase = max(monthly_changes)
+    decrease = min(monthly_changes)
 
 # Print out the Financial Analysis output
 print(f"Financial Analysis")
@@ -92,4 +92,3 @@ with open(output_path, "w") as txtfile:
     txtfile.writerow(f"Average Change: ${average}\n")
     txtfile.writerow(f"Greatest Increase in Profits:, {greatest_monthly_increase}, (${increase})\n")
     txtfile.writerow(f"Greatest Decrease in Profits:, {greatest_monthly_decrease}, (${decrease})\n")
-
