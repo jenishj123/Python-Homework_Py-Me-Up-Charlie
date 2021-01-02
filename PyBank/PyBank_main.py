@@ -2,8 +2,9 @@
 import os
 import csv
 
-# path to CSV file
-csvpath = os.path.join('C:/Users/jariwalaj2/OneDrive/Python_Homework2_Py-Me-Up-Charlie/budget_data.csv')
+# path to CSV file GitHub & my local PC
+csvpath = os.path.join('.', 'PyBank', 'Resources', 'budget_data.csv')
+#csvpath = os.path.join('C:/Users/jariwalaj2/OneDrive/Python_Homework2_Py-Me-Up-Charlie/budget_data.csv')
 
 # open and read the CSV file
 with open(csvpath) as csvfile:
